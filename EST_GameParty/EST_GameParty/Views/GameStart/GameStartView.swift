@@ -10,6 +10,7 @@ import SwiftUI
 struct GameStartView: View {
     var body: some View {
         Text("GameRankingView")
+            .font(.largeTitle)
     }
 }
 
