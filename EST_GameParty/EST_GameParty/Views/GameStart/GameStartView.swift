@@ -11,6 +11,11 @@ struct GameStartView: View {
     var body: some View {
         Text("GameRankingView")
             .font(.largeTitle)
+        Button("게임 선택")
+            {
+            
+        }.font(.largeTitle)
+            .padding()
     }
 }
 
