@@ -14,7 +14,6 @@ struct MainTabBarView: View {
                     .tabItem {
                         Label("게임 시작", systemImage: "play.circle")
                     }
-                
                 GameRuleView()
                     .tabItem {
                         Label("게임 방법", systemImage: "book")
