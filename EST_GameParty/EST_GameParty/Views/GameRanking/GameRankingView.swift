@@ -24,9 +24,9 @@ struct Difficulty: Identifiable { // 난이도 정보를 나타내는 모델로,
 
 // 난이도 데이터 (Difficulty Data)
 let DIFFICULTY_LEVELS: [Difficulty] = [  // 난이도 정보를 담은 배열
-    Difficulty(id: "3", name: "3자리", color: Color(hex: 0xFF6B6B)), // 3자리 난이도
+    Difficulty(id: "3", name: "3자리", color: Color(hex: 0x4ECDC4)), // 3자리 난이도
     Difficulty(id: "4", name: "4자리", color: Color(hex: 0x4ECDC4)), // 4자리 난이도
-    Difficulty(id: "5", name: "5자리", color: Color(hex: 0x45B7D1))  // 5자리 난이도
+    Difficulty(id: "5", name: "5자리", color: Color(hex: 0x4ECDC4))  // 5자리 난이도
 ]
 
 // 샘플 순위 데이터
