@@ -2,7 +2,7 @@
 //  GameRuleView.swift
 //  EST_GameParty
 //
-//  Created by 안세훈 on 2/14/25.
+//  Created by 원대한 on 2/18/25.
 //
 
 import SwiftUI
@@ -16,4 +16,3 @@ struct GameRuleView: View {
 #Preview {
     GameRuleView()
 }
-//사랑하는 첫번째 프로젝트
