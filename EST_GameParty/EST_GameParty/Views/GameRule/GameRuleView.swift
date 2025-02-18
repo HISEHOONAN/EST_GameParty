@@ -16,3 +16,4 @@ struct GameRuleView: View {
 #Preview {
     GameRuleView()
 }
+//사랑하는 첫번째 프로젝트
