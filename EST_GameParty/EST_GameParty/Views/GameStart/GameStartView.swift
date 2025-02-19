@@ -12,7 +12,7 @@ struct GameStartView: View {
         NavigationStack {
             ZStack {
                 // 배경 그라데이션
-                LinearGradient(gradient: Gradient(colors: [Color(hex: "1a237e"), Color(hex: "311b92")]),
+                LinearGradient(gradient: Gradient(colors: [Color(hex: "0026FD"), Color(hex: "311b92")]),
                              startPoint: .top,
                              endPoint: .bottom)
                     .ignoresSafeArea()
@@ -74,7 +74,7 @@ struct GameStartView: View {
                     // 버튼
                     VStack(spacing: 16) {
                         NavigationLink(destination: Text("Game View")) {
-                            GradientButton(
+                            CustomButton(
                                 title: "게임 시작",
                                 icon: "play.circle.fill",
                                 colors: [Color(hex: "00b0ff"), Color(hex: "2979ff")]
@@ -82,7 +82,7 @@ struct GameStartView: View {
                         }
                         
                         NavigationLink(destination: NoticeView()) {
-                            GradientButton(
+                            CustomButton(
                                 title: "공지사항",
                                 icon: "bell.fill",
                                 colors: [Color(hex: "7c4dff"), Color(hex: "651fff")]

@@ -9,39 +9,99 @@ import SwiftUI
 
 struct NoticeView: View {
     
-    // 공지사항 리스트
-    var noticeList = [
-        GameNotice(title: "게임 시작 안내", date: "2025-02-18", contents: "게임 시작 안내에 관련한 공지사항을 적음면 됩니다. 근데 할 말이 없으니 그냥 아무말이나 적겠습니다. 독도는 우리땅 ."),
-        GameNotice(title: "게임 규칙 업데이트", date: "2025-02-19", contents: "게임 규칙 업데이트에 대한 설명을 여기에 주저리 주저리 적으면 됩니다 아 근데 배고프당 흐하ㅣㅎㅎㅎ"),
-        GameNotice(title: "공지 사항", date: "2025-02-20", contents: "공지사항에 대한 컨텐츠를 적습니다. 내가 없인 단하루도 모ㅓㅅ살것 만 같았던 나 보고싶다고 불러봐더 너ㅏㄴ 아무 대다ㅓㅂ없잖아>? 니옆에 있는 그 사람이 뭔지 널 울리지 않랑쓴ㄴ지 빅뱅최고 하루하루 ㅋㅋ")
+    @Environment(\.dismiss) private var dismiss
+    @State private var selectedNotice: Notice?
+    @State private var showDetail = false
+    
+    // 샘플 공지사항 데이터
+    let notices = [
+        Notice(
+            title: "숫자야구 게임 업데이트 안내",
+            date: "2025.02.19",
+            category: "업데이트",
+            content: "1. 게임 성능 최적화\n2. 새로운 도전과제 추가\n3. UI/UX 개선\n4. 버그 수정",
+            isNew: true
+        ),
+        Notice(
+            title: "2월 이벤트 안내",
+            date: "2025.02.15",
+            category: "이벤트",
+            content: "2월 한달 간 매일 첫 게임 승리 시 특별 보상이 지급됩니다!",
+            isNew: true
+        ),
+        Notice(
+            title: "서버 점검 안내",
+            date: "2025.02.10",
+            category: "점검",
+            content: "2025년 2월 11일 02:00 ~ 06:00\n정기 서버 점검이 진행됩니다.",
+            isNew: false
+        ),
+        Notice(
+            title: "게임 규칙 안내",
+            date: "2025.02.01",
+            category: "안내",
+            content: "숫자야구 게임의 기본 규칙을 안내드립니다.\n\n1. 3자리의 서로 다른 숫자를 맞추는 게임입니다.\n2. 숫자와 위치가 모두 맞으면 스트라이크\n3. 숫자는 맞지만 위치가 다르면 볼\n4. 3스트라이크면 게임 승리!",
+            isNew: false
+        )
     ]
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                // 타이틀
-                Text("공지사항")
-                    .font(.largeTitle)
-                    .padding()
-                
-                // 공지사항 리스트
-                List(noticeList, id: \.title) { notice in
-                    NavigationLink(destination: NoticeDetailView(notice: notice)){
-                        VStack(alignment: .leading) {
-                            Text(notice.title)
-                                .font(.headline)
-                            Text(notice.date)
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
-                        }
-                        .padding()
+        ZStack {
+            // 배경 그라데이션
+            LinearGradient(gradient: Gradient(colors: [Color(hex: "0026FD"), Color(hex: "311b92")]),
+                          startPoint: .top,
+                          endPoint: .bottom)
+                .ignoresSafeArea()
+            
+            VStack(spacing: 0) {
+                // 헤더
+                HStack {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "chevron.left")
+                            .font(.title2)
+                            .foregroundColor(.white)
                     }
+                    
+                    Spacer()
+                    
+                    Text("공지사항")
+                        .font(.title2.bold())
+                        .foregroundColor(.white)
+                    
+                    Spacer()
+                    
+                    // 균형을 위한 빈 공간
+                    Image(systemName: "chevron.left")
+                        .font(.title2)
+                        .foregroundColor(.clear)
+                }
+                .padding()
+                
+                // 공지사항 목록
+                ScrollView {
+                    LazyVStack(spacing: 12) {
+                        ForEach(notices) { notice in
+                            NoticeCardView(notice: notice)
+                                .onTapGesture {
+                                    selectedNotice = notice
+                                    showDetail = true
+                                }
+                        }
+                    }
+                    .padding()
                 }
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .navigationBarHidden(true)
+        .sheet(isPresented: $showDetail) {
+            if let notice = selectedNotice {
+                NoticeDetailView(notice: notice)
+            }
+        }
     }
 }
+
+// 공지사항 카드 컴포넌트
 
 #Preview {
     NoticeView()

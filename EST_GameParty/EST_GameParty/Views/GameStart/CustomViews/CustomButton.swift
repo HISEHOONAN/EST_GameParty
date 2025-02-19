@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-// 그라데이션 버튼 컴포넌트
-struct GradientButton: View {
+struct CustomButton: View {
     let title: String
     let icon: String
     let colors: [Color]
