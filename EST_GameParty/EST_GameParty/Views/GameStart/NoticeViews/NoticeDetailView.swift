@@ -67,6 +67,7 @@ struct NoticeDetailView: View {
                             .lineSpacing(6)
                     }
                     .padding()
+                    .navigationBarBackButtonHidden()
                 }
             }
         }

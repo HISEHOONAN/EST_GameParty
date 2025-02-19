@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ProfileView: View {
     @Environment(\.dismiss) private var dismiss
+    
+    //MARK: - 프로필 수정
     @State private var isEditMode = false
     
-    // 사용자 정보를 위한 상태 변수들
+    //MARK: - 사용자 정보를 위한 상태 변수들
     @State private var nickname = "게이머123"
     @State private var totalGames = 42
     @State private var winRate = 76.2
@@ -21,7 +23,7 @@ struct ProfileView: View {
     var body: some View {
         ZStack {
             // 배경 그라데이션
-            LinearGradient(gradient: Gradient(colors: [Color(hex: "1a237e"), Color(hex: "311b92")]),
+            LinearGradient(gradient: Gradient(colors: [Color(hex: "0026FD"), Color(hex: "311b92")]),
                            startPoint: .top,
                            endPoint: .bottom)
             .ignoresSafeArea()
