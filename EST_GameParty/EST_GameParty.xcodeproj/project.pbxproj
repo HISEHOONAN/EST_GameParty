@@ -23,7 +23,17 @@
 		D1DD60EA2D5F448400092BC2 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60E92D5F448400092BC2 /* GameStartView.swift */; };
 		D1DD60EC2D5F449200092BC2 /* GameRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60EB2D5F449200092BC2 /* GameRuleView.swift */; };
 		D1DD60EE2D5F449C00092BC2 /* GameRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60ED2D5F449C00092BC2 /* GameRankingView.swift */; };
+<<<<<<< HEAD
 		DAA39FCE2D6469F800772AF7 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA39FCD2D6469F800772AF7 /* AnimationView.swift */; };
+=======
+		D1FE45282D656D4800BB857F /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE45272D656D4400BB857F /* NoticeModel.swift */; };
+		D1FE452A2D6572F700BB857F /* NoticeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE45292D6572F700BB857F /* NoticeCardView.swift */; };
+		D1FE452E2D65737E00BB857F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE452C2D65737E00BB857F /* CustomButton.swift */; };
+		D1FE452F2D65737E00BB857F /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE452D2D65737E00BB857F /* CustomText.swift */; };
+		D1FE45332D65740800BB857F /* StatisticsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE45322D65740800BB857F /* StatisticsCard.swift */; };
+		D1FE45352D65741600BB857F /* RecentGamesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE45342D65741600BB857F /* RecentGamesCard.swift */; };
+		D1FE45372D65742C00BB857F /* AchievementsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE45362D65742C00BB857F /* AchievementsCard.swift */; };
+>>>>>>> develop
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +54,13 @@
 		D1DD60E92D5F448400092BC2 /* GameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartView.swift; sourceTree = "<group>"; };
 		D1DD60EB2D5F449200092BC2 /* GameRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRuleView.swift; sourceTree = "<group>"; };
 		D1DD60ED2D5F449C00092BC2 /* GameRankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRankingView.swift; sourceTree = "<group>"; };
+		D1FE45272D656D4400BB857F /* NoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeModel.swift; sourceTree = "<group>"; };
+		D1FE45292D6572F700BB857F /* NoticeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCardView.swift; sourceTree = "<group>"; };
+		D1FE452C2D65737E00BB857F /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		D1FE452D2D65737E00BB857F /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
+		D1FE45322D65740800BB857F /* StatisticsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCard.swift; sourceTree = "<group>"; };
+		D1FE45342D65741600BB857F /* RecentGamesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentGamesCard.swift; sourceTree = "<group>"; };
+		D1FE45362D65742C00BB857F /* AchievementsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
