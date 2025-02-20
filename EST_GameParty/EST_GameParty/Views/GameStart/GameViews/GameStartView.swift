@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GameStartView: View {
+    @State private var showGameSelector = false
+
     var body: some View {
         NavigationStack {
             ZStack {
@@ -73,12 +75,15 @@ struct GameStartView: View {
                     
                     // 버튼
                     VStack(spacing: 16) {
-                        NavigationLink(destination: Text("Game View")) {
+                        Button(action: { showGameSelector = true }) {
                             CustomButton(
                                 title: "게임 시작",
                                 icon: "play.circle.fill",
                                 colors: [Color(hex: "00b0ff"), Color(hex: "2979ff")]
                             )
+                        }
+                        .sheet(isPresented: $showGameSelector) {
+                            GameSelectorView()
                         }
                         
                         NavigationLink(destination: NoticeView()) {
