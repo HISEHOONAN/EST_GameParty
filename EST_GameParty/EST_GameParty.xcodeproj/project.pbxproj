@@ -24,8 +24,11 @@
 		D1DD60EC2D5F449200092BC2 /* GameRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60EB2D5F449200092BC2 /* GameRuleView.swift */; };
 		D1DD60EE2D5F449C00092BC2 /* GameRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60ED2D5F449C00092BC2 /* GameRankingView.swift */; };
 <<<<<<< HEAD
+<<<<<<< HEAD
 		DAA39FCE2D6469F800772AF7 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA39FCD2D6469F800772AF7 /* AnimationView.swift */; };
 =======
+=======
+>>>>>>> develop
 		D1FE45282D656D4800BB857F /* NoticeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE45272D656D4400BB857F /* NoticeModel.swift */; };
 		D1FE452A2D6572F700BB857F /* NoticeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE45292D6572F700BB857F /* NoticeCardView.swift */; };
 		D1FE452E2D65737E00BB857F /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE452C2D65737E00BB857F /* CustomButton.swift */; };
@@ -33,6 +36,9 @@
 		D1FE45332D65740800BB857F /* StatisticsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE45322D65740800BB857F /* StatisticsCard.swift */; };
 		D1FE45352D65741600BB857F /* RecentGamesCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE45342D65741600BB857F /* RecentGamesCard.swift */; };
 		D1FE45372D65742C00BB857F /* AchievementsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE45362D65742C00BB857F /* AchievementsCard.swift */; };
+<<<<<<< HEAD
+>>>>>>> develop
+=======
 >>>>>>> develop
 /* End PBXBuildFile section */
 
