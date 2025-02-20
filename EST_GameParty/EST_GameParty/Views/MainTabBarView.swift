@@ -19,7 +19,7 @@ struct MainTabBarView: View {
                     Label("게임 방법", systemImage: "book")
                 }
             
-            GameRankingView()
+            RankingComponent()
                 .tabItem {
                     Label("랭킹", systemImage: "trophy")
                 }
