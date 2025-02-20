@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct GameRuleView: View {
+    
     @State private var showAnimationView = false
     
     var body: some View {

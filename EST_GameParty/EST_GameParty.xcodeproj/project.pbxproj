@@ -24,6 +24,7 @@
 		D1B2C96C2D66F62D003DCC83 /* AchievementsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2C9572D66F62D003DCC83 /* AchievementsCard.swift */; };
 		D1B2C96D2D66F62D003DCC83 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2C94E2D66F62D003DCC83 /* GameStartView.swift */; };
 		D1B2C96E2D66F62D003DCC83 /* NoticeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2C9532D66F62D003DCC83 /* NoticeCardView.swift */; };
+		D1B2C9702D66F786003DCC83 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2C96F2D66F786003DCC83 /* AnimationView.swift */; };
 		D1DD60E32D5F445800092BC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1DD60DD2D5F445800092BC2 /* Preview Assets.xcassets */; };
 		D1DD60E42D5F445800092BC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1DD60DF2D5F445800092BC2 /* Assets.xcassets */; };
 		D1DD60E52D5F445800092BC2 /* EST_GamePartyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60E02D5F445800092BC2 /* EST_GamePartyApp.swift */; };
@@ -50,6 +51,7 @@
 		D1B2C9582D66F62D003DCC83 /* RecentGamesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentGamesCard.swift; sourceTree = "<group>"; };
 		D1B2C9592D66F62D003DCC83 /* StatisticsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCard.swift; sourceTree = "<group>"; };
 		D1B2C95B2D66F62D003DCC83 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D1B2C96F2D66F786003DCC83 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		D1DD60C42D5F43CE00092BC2 /* EST_GameParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EST_GameParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1DD60DD2D5F445800092BC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D1DD60DF2D5F445800092BC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		D1DD60DB2D5F445800092BC2 /* GameRule */ = {
 			isa = PBXGroup;
 			children = (
+				D1B2C96F2D66F786003DCC83 /* AnimationView.swift */,
 				D1DD60EB2D5F449200092BC2 /* GameRuleView.swift */,
 			);
 			path = GameRule;
@@ -322,6 +325,7 @@
 				D1B2C96E2D66F62D003DCC83 /* NoticeCardView.swift in Sources */,
 				D1DD60E62D5F445800092BC2 /* MainTabBarView.swift in Sources */,
 				D1DD60EC2D5F449200092BC2 /* GameRuleView.swift in Sources */,
+				D1B2C9702D66F786003DCC83 /* AnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
