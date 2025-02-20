@@ -3,7 +3,8 @@
 //  EST_GameParty
 //
 //  Created by 안세훈 on 2/14/25.
-//  Code written by 윤태한 on 2/17/25//
+//  Code written by 윤태한 on 2/17/25
+//
 
 import SwiftUI
 
@@ -107,56 +108,63 @@ struct RankingRow: View { // RankingRow 뷰 정의
 }
 
 // MARK: - RankingComponent 뷰 (전체 랭킹 뷰)
-struct RankingComponent: View { // RankingComponent 뷰 정의
+struct RankingComponent: View {
     @State private var selectedDifficulty: String = "3" // 현재 선택된 난이도를 상태 변수로 저장 (초기값 "3")
-    
+
     var body: some View {
-        VStack {
-            Text("숫자야구 랭킹")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.black)
-                .padding(.bottom, 20)
+        ZStack {
+            // 배경 그라데이션
+            LinearGradient(gradient: Gradient(colors: [Color(hex: "0026FD"), Color(hex: "311b92")]),
+                           startPoint: .top,
+                           endPoint: .bottom)
+                .ignoresSafeArea()
             
-            // 난이도 탭 (Difficulty Tabs)
-            HStack {
-                ForEach(DIFFICULTY_LEVELS) { level in // DIFFICULTY_LEVELS 배열의 각 항목에 대해 반복
-                    Button(action: { // 각 난이도 버튼의 액션 정의
-                        selectedDifficulty = level.id // 버튼이 눌리면 선택된 난이도를 해당 id로 변경
-                    }) {
-                        Text(level.name) // 버튼에 난이도 이름 표시
-                            .font(.system(size: 16, weight: .semibold))
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 10)
-                            .foregroundColor(selectedDifficulty == level.id ? .white : .black)
-                            .background(selectedDifficulty == level.id ? level.color : Color.clear)
-                            .cornerRadius(12)
-                    }
-                } // ForEach 종료 (모든 난이도 버튼 생성)
-            }
-            .padding(4)
-            .background(Color.white)
-            .cornerRadius(15)
-            .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.gray, lineWidth: 1))
-            .padding(.horizontal)
-            .padding(.bottom, 20)
-            
-            // 순위 리스트 (Ranking List)
-            ScrollView { // 수직 스크롤 뷰: 순위 항목들이 스크롤 가능하도록 함
-                VStack(spacing: 12) { // 순위 항목들을 담는 수직 스택, 각 항목 사이에 12 포인트 간격 적용
-                    if let rankings = MOCK_RANKINGS[selectedDifficulty] { // 선택된 난이도에 해당하는 순위 데이터가 있는지 확인
-                        ForEach(Array(rankings.enumerated()), id: \.element.id) { index, item in // 각 순위 항목과 인덱스를 반복
-                            RankingRow(index: index, item: item) // RankingRow 뷰를 통해 각 순위 항목 표시
+            VStack {
+                Text("숫자야구 랭킹")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.bottom, 20)
+                
+                // 난이도 탭 (Difficulty Tabs)
+                HStack {
+                    ForEach(DIFFICULTY_LEVELS) { level in
+                        Button(action: {
+                            selectedDifficulty = level.id
+                        }) {
+                            Text(level.name)
+                                .font(.system(size: 16, weight: .semibold))
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 10)
+                                .foregroundColor(selectedDifficulty == level.id ? .white : .black)
+                                .background(selectedDifficulty == level.id ? level.color : Color.clear)
+                                .cornerRadius(12)
                         }
                     }
-                } // VStack 종료 (순위 항목 전체)
-                .padding(.horizontal, 8)
-            } // ScrollView 종료 (순위 리스트)
-            
-            Spacer()
-        } // VStack 종료 (전체 랭킹 컴포넌트)
-        .padding(16)
-        .background(Color.white.ignoresSafeArea())
+                }
+                .padding(4)
+                .background(Color.white)
+                .cornerRadius(15)
+                .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.gray, lineWidth: 1))
+                .padding(.horizontal)
+                .padding(.bottom, 20)
+                
+                // 순위 리스트 (Ranking List)
+                ScrollView {
+                    VStack(spacing: 12) {
+                        if let rankings = MOCK_RANKINGS[selectedDifficulty] {
+                            ForEach(Array(rankings.enumerated()), id: \.element.id) { index, item in
+                                RankingRow(index: index, item: item)
+                            }
+                        }
+                    }
+                    .padding(.horizontal, 8)
+                }
+                
+                Spacer()
+            }
+            .padding(16)
+        }
     }
 }
 
