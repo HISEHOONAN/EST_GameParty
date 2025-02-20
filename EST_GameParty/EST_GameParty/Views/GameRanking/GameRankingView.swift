@@ -68,7 +68,7 @@ struct RankingRow: View { // RankingRow 뷰 정의
         HStack(spacing: 16) {
             VStack { // VStack: 순위 번호와 1등 왕관 아이콘을 배치
                 Text("\(index + 1)") // 인덱스에 1을 더해 순위를 표시
-                    .font(.system(size: 20, weight: .bold))
+                    .font(.system(size: 20,  weight: .bold))
                     .foregroundColor(.black)
                 if index == 0 { // 첫 번째 항목인 경우 (1등)
                     Image(systemName: "crown.fill") // SF Symbols의 왕관 아이콘 표시

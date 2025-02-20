@@ -24,7 +24,7 @@ struct MainTabBarView: View {
                     Label("랭킹", systemImage: "trophy")
                 }
         }.tint(.white)
-            
+        
     }
 }
 

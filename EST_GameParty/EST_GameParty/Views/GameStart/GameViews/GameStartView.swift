@@ -9,15 +9,15 @@ import SwiftUI
 
 struct GameStartView: View {
     @State private var showGameSelector = false
-
+    
     var body: some View {
         NavigationStack {
             ZStack {
                 // 배경 그라데이션
                 LinearGradient(gradient: Gradient(colors: [Color(hex: "0026FD"), Color(hex: "311b92")]),
-                             startPoint: .top,
-                             endPoint: .bottom)
-                    .ignoresSafeArea()
+                               startPoint: .top,
+                               endPoint: .bottom)
+                .ignoresSafeArea()
                 
                 VStack(spacing: 0) {
                     // 헤더
@@ -56,8 +56,8 @@ struct GameStartView: View {
                                 .scaledToFit()
                                 .padding(20)
                                 .foregroundColor(.clear)
-                                
-                                
+                            
+                            
                         )
                         .shadow(radius: 10)
                     
@@ -82,7 +82,7 @@ struct GameStartView: View {
                                 colors: [Color(hex: "00b0ff"), Color(hex: "2979ff")]
                             )
                         }
-                        .sheet(isPresented: $showGameSelector) {
+                        .fullScreenCover(isPresented: $showGameSelector) {
                             GameSelectorView()
                         }
                         
