@@ -30,7 +30,6 @@
 		D1DD60E52D5F445800092BC2 /* EST_GamePartyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60E02D5F445800092BC2 /* EST_GamePartyApp.swift */; };
 		D1DD60E62D5F445800092BC2 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60E12D5F445800092BC2 /* MainTabBarView.swift */; };
 		D1DD60EC2D5F449200092BC2 /* GameRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60EB2D5F449200092BC2 /* GameRuleView.swift */; };
-		D1DD60EE2D5F449C00092BC2 /* GameRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60ED2D5F449C00092BC2 /* GameRankingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +57,25 @@
 		D1DD60E02D5F445800092BC2 /* EST_GamePartyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EST_GamePartyApp.swift; sourceTree = "<group>"; };
 		D1DD60E12D5F445800092BC2 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
 		D1DD60EB2D5F449200092BC2 /* GameRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRuleView.swift; sourceTree = "<group>"; };
-		D1DD60ED2D5F449C00092BC2 /* GameRankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRankingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9A7D174A2D670F2A00E2E0BC /* Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9A7D174B2D670F3300E2E0BC /* Model */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A7D174C2D670F3800E2E0BC /* Views */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D1DD60C12D5F43CE00092BC2 /* Frameworks */ = {
@@ -179,7 +195,9 @@
 		D1DD60DA2D5F445800092BC2 /* GameRanking */ = {
 			isa = PBXGroup;
 			children = (
-				D1DD60ED2D5F449C00092BC2 /* GameRankingView.swift */,
+				9A7D174C2D670F3800E2E0BC /* Views */,
+				9A7D174B2D670F3300E2E0BC /* Model */,
+				9A7D174A2D670F2A00E2E0BC /* Extension */,
 			);
 			path = GameRanking;
 			sourceTree = "<group>";
@@ -246,6 +264,11 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				9A7D174A2D670F2A00E2E0BC /* Extension */,
+				9A7D174B2D670F3300E2E0BC /* Model */,
+				9A7D174C2D670F3800E2E0BC /* Views */,
+			);
 			name = EST_GameParty;
 			packageProductDependencies = (
 			);
@@ -305,7 +328,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1DD60E52D5F445800092BC2 /* EST_GamePartyApp.swift in Sources */,
-				D1DD60EE2D5F449C00092BC2 /* GameRankingView.swift in Sources */,
 				D1B2C95E2D66F62D003DCC83 /* StatisticsCard.swift in Sources */,
 				D1B2C95F2D66F62D003DCC83 /* GameSelectorView.swift in Sources */,
 				D1B2C9602D66F62D003DCC83 /* GameStartModel.swift in Sources */,
