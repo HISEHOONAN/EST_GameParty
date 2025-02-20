@@ -3,8 +3,7 @@
 //  EST_GameParty
 //
 //  Created by 안세훈 on 2/14/25.
-//  Code written by 윤태한 on 2/17/25.
-//
+//  Code written by 윤태한 on 2/17/25//
 
 import SwiftUI
 
