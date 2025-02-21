@@ -1,3 +1,9 @@
+//  RuleItemView.swift
+//  EST_GameParty
+//
+//  Created by 원대한 on 2/20/25.
+//
+
 import SwiftUI
 
 // TitleAnimationView라는 View를 정의
