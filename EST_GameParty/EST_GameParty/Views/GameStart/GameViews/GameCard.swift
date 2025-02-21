@@ -13,7 +13,6 @@ struct GameCard: View {
     
     var body: some View {
         HStack(spacing: 16) {
-            // 게임 아이콘
             Image(systemName: game.icon)
                 .font(.system(size: 40))
                 .foregroundColor(game.isAvailable ? .white : .gray)
@@ -35,7 +34,6 @@ struct GameCard: View {
             
             Spacer()
             
-            // 사용 가능 여부 표시
             Image(systemName: game.isAvailable ? "chevron.right" : "lock.fill")
                 .foregroundColor(game.isAvailable ? .white : .gray)
                 .font(.title3)

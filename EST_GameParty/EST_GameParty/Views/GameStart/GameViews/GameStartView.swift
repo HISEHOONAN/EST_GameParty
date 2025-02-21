@@ -9,18 +9,16 @@ import SwiftUI
 
 struct GameStartView: View {
     @State private var showGameSelector = false
-
+    
     var body: some View {
         NavigationStack {
             ZStack {
-                // 배경 그라데이션
                 LinearGradient(gradient: Gradient(colors: [Color(hex: "0026FD"), Color(hex: "311b92")]),
-                             startPoint: .top,
-                             endPoint: .bottom)
-                    .ignoresSafeArea()
+                               startPoint: .top,
+                               endPoint: .bottom)
+                .ignoresSafeArea()
                 
                 VStack(spacing: 0) {
-                    // 헤더
                     HStack {
                         HStack(spacing: 8) {
                             Image(systemName: "gamecontroller.fill")
@@ -46,7 +44,6 @@ struct GameStartView: View {
                     
                     Spacer()
                     
-                    // 게임 로고 이미지
                     RoundedRectangle(cornerRadius: 20)
                         .fill(Color.white.opacity(0.1))
                         .frame(width: 300, height: 200)
@@ -56,12 +53,11 @@ struct GameStartView: View {
                                 .scaledToFit()
                                 .padding(20)
                                 .foregroundColor(.clear)
-                                
-                                
+                            
+                            
                         )
                         .shadow(radius: 10)
                     
-                    // 게임 제목
                     VStack(spacing: 8) {
                         Text("게임 파티!")
                             .font(.system(size: 36, weight: .bold))
@@ -73,7 +69,6 @@ struct GameStartView: View {
                     }
                     .padding(.vertical, 40)
                     
-                    // 버튼
                     VStack(spacing: 16) {
                         Button(action: { showGameSelector = true }) {
                             CustomButton(
@@ -82,7 +77,7 @@ struct GameStartView: View {
                                 colors: [Color(hex: "00b0ff"), Color(hex: "2979ff")]
                             )
                         }
-                        .sheet(isPresented: $showGameSelector) {
+                        .fullScreenCover(isPresented: $showGameSelector) {
                             GameSelectorView()
                         }
                         

@@ -1,9 +1,12 @@
+<<<<<<< HEAD:EST_GameParty/EST_GameParty/Views/GameRule/AnimationView/TitleAnimationView.swift
 //  RuleItemView.swift
 //  EST_GameParty
 //
 //  Created by 원대한 on 2/20/25.
 //
 
+=======
+>>>>>>> Feature/GameStart:EST_GameParty/EST_GameParty/Views/GameRule/AnimationView.swift
 import SwiftUI
 
 

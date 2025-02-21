@@ -8,32 +8,35 @@
 import SwiftUI
 
 struct NumberBaseballGameView: View {
-    //화면 전환
+    
     @Environment(\.dismiss) private var dismiss
-    //유저숫자
     @State private var userInput = ""
-    //지금까지의 숫자 기록
     @State private var gameHistory: [(guess: String, result: String)] = []
-    //정답
-    @State private var targetNumber = generateTargetNumber()
-    //게임 끝
+    @State private var targetNumber: String
     @State private var showGameOver = false
-    //시도 횟수
+    @State private var showAlert = false
+    @State private var alertMessage = ""
     @State private var attempts = 0
     
-    static func generateTargetNumber() -> String {
+    let difficulty: DifficultySelector.Difficulty
+    
+    init(difficulty: DifficultySelector.Difficulty) {
+        self.difficulty = difficulty
+        _targetNumber = State(initialValue: Self.generateTargetNumber(digits: difficulty.digitCount))
+    }
+    
+    static func generateTargetNumber(digits: Int) -> String {
         var numbers = Array(0...9)
         numbers.shuffle()
-        return String(numbers[0...2].map { String($0) }.joined())
+        return String(numbers[0..<digits].map { String($0) }.joined())
     }
     
     var body: some View {
         ZStack {
-            // 배경 그라데이션
             LinearGradient(gradient: Gradient(colors: [Color(hex: "0026FD"), Color(hex: "311b92")]),
-                          startPoint: .top,
-                          endPoint: .bottom)
-                .ignoresSafeArea()
+                           startPoint: .top,
+                           endPoint: .bottom)
+            .ignoresSafeArea()
             
             VStack(spacing: 0) {
                 // 헤더
@@ -43,15 +46,11 @@ struct NumberBaseballGameView: View {
                             .font(.title2)
                             .foregroundColor(.white)
                     }
-                    
                     Spacer()
-                    
                     Text("숫자야구")
                         .font(.title2.bold())
                         .foregroundColor(.white)
-                    
                     Spacer()
-                    
                     Button(action: resetGame) {
                         Image(systemName: "arrow.clockwise")
                             .font(.title2)
@@ -60,7 +59,6 @@ struct NumberBaseballGameView: View {
                 }
                 .padding()
                 
-                // 게임 기록
                 ScrollView {
                     LazyVStack(spacing: 12) {
                         ForEach(gameHistory.indices, id: \.self) { index in
@@ -74,10 +72,9 @@ struct NumberBaseballGameView: View {
                     .padding()
                 }
                 
-                // 입력 영역
                 VStack(spacing: 16) {
                     HStack {
-                        TextField("3자리 숫자 입력", text: $userInput)
+                        TextField("\(difficulty.digitCount)자리 숫자 입력", text: $userInput)
                             .keyboardType(.numberPad)
                             .font(.title3)
                             .padding()
@@ -95,11 +92,18 @@ struct NumberBaseballGameView: View {
                                         .fill(Color(hex: "00b0ff"))
                                 )
                         }
-                        .disabled(userInput.count != 3)
                     }
                     .padding()
                 }
+                .navigationBarBackButtonHidden()
+                
+                Spacer()
             }
+        }
+        .alert("입력 오류", isPresented: $showAlert) {
+            Button("확인", role: .cancel) { }
+        } message: {
+            Text(alertMessage)
         }
         .alert("게임 종료!", isPresented: $showGameOver) {
             Button("새 게임", action: resetGame)
@@ -107,9 +111,13 @@ struct NumberBaseballGameView: View {
             Text("축하합니다! \(attempts)번 만에 맞추셨습니다!")
         }
     }
-    //MARK: - 야구게임
+    
     private func checkGuess() {
-        guard userInput.count == 3 else { return }
+        guard userInput.count == difficulty.digitCount else {
+            alertMessage = "숫자를 \(difficulty.digitCount)자리로 입력해주세요!"
+            showAlert = true
+            return
+        }
         
         var strikes = 0
         var balls = 0
@@ -129,13 +137,13 @@ struct NumberBaseballGameView: View {
         gameHistory.insert((guess: userInput, result: result), at: 0)
         userInput = ""
         
-        if strikes == 3 {
+        if strikes == difficulty.digitCount {
             showGameOver = true
         }
     }
     
     private func resetGame() {
-        targetNumber = Self.generateTargetNumber()
+        targetNumber = Self.generateTargetNumber(digits: difficulty.digitCount)
         gameHistory.removeAll()
         attempts = 0
         userInput = ""

@@ -6,7 +6,6 @@
 //
 import SwiftUI
 
-// 최근 게임 기록 카드
 struct RecentGamesCard: View {
     let recentGames = [
         ("승리", "3S 2B", "2:30"),
