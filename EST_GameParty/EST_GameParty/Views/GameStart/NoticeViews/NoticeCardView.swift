@@ -13,7 +13,6 @@ struct NoticeCardView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                // 카테고리 태그
                 Text(notice.category)
                     .font(.caption.bold())
                     .padding(.horizontal, 12)
@@ -53,7 +52,6 @@ struct NoticeCardView: View {
         .clipShape(RoundedRectangle(cornerRadius: 20))
     }
     
-    // 카테고리별 색상
     func categoryColor(_ category: String) -> Color {
         switch category {
         case "업데이트":

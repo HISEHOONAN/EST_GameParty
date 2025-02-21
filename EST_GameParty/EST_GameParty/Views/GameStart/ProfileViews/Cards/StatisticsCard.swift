@@ -6,7 +6,6 @@
 //
 import SwiftUI
 
-// 통계 카드 컴포넌트
 struct StatisticsCard: View {
     let title: String
     let stats: [(String, String)]

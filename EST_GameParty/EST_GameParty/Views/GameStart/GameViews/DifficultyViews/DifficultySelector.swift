@@ -58,7 +58,6 @@ struct DifficultySelector: View {
                 .ignoresSafeArea()
                 
                 VStack(spacing: 0) {
-                    // 헤더
                     HStack {
                         Button(action: { dismiss() }) {
                             Image(systemName: "xmark")
@@ -85,13 +84,13 @@ struct DifficultySelector: View {
                         .foregroundColor(Color(hex: "b3e5fc"))
                         .padding(.top, 30)
                     
-                    // 🔹 난이도 카드 리스트 추가
+
                     ScrollView {
                         VStack(spacing: 16) {
                             ForEach(Difficulty.allCases, id: \.self) { difficulty in
                                 NavigationLink(destination: NumberBaseballGameView(difficulty: difficulty)) {
                                     DifficultyCard(difficulty: difficulty)
-                                        .contentShape(Rectangle()) // 터치 영역 확장
+                                        .contentShape(Rectangle())
                                 }
                             }
                         }

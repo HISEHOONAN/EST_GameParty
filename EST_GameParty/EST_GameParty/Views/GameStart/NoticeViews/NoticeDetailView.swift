@@ -15,14 +15,12 @@ struct NoticeDetailView: View {
     
     var body: some View {
         ZStack {
-            // 배경 그라데이션
             LinearGradient(gradient: Gradient(colors: [Color(hex: "0026FD"), Color(hex: "311b92")]),
                           startPoint: .top,
                           endPoint: .bottom)
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
-                // 헤더
                 HStack {
                     Button(action: { dismiss() }) {
                         Image(systemName: "xmark")
@@ -36,7 +34,6 @@ struct NoticeDetailView: View {
                 
                 ScrollView {
                     VStack(alignment: .leading, spacing: 20) {
-                        // 제목 섹션
                         VStack(alignment: .leading, spacing: 12) {
                             HStack {
                                 Text(notice.category)
@@ -60,7 +57,6 @@ struct NoticeDetailView: View {
                         Divider()
                             .background(Color.white.opacity(0.2))
                         
-                        // 내용
                         Text(notice.content)
                             .font(.body)
                             .foregroundColor(.white)

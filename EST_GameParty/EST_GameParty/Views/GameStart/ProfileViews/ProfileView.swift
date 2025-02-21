@@ -22,7 +22,6 @@ struct ProfileView: View {
     
     var body: some View {
         ZStack {
-            // 배경 그라데이션
             LinearGradient(gradient: Gradient(colors: [Color(hex: "0026FD"), Color(hex: "311b92")]),
                            startPoint: .top,
                            endPoint: .bottom)
@@ -30,7 +29,6 @@ struct ProfileView: View {
             
             ScrollView {
                 VStack(spacing: 20) {
-                    // 프로필 헤더
                     HStack {
                         Button(action: { dismiss() }) {
                             Image(systemName: "chevron.left")
@@ -54,7 +52,6 @@ struct ProfileView: View {
                     }
                     .padding()
                     
-                    // 프로필 이미지 & 닉네임
                     VStack(spacing: 16) {
                         Image(systemName: "person.circle.fill")
                             .resizable()
@@ -74,7 +71,6 @@ struct ProfileView: View {
                     }
                     .padding(.bottom)
                     
-                    // 게임 통계
                     VStack(spacing: 20) {
                         StatisticsCard(title: "게임 통계", stats: [
                             ("총 게임", "\(totalGames)회"),
@@ -83,10 +79,8 @@ struct ProfileView: View {
                             ("최고 기록", bestRecord)
                         ])
                         
-                        // 최근 게임 기록
                         RecentGamesCard()
                         
-                        // 업적
                         AchievementsCard()
                     }
                     .padding(.horizontal)

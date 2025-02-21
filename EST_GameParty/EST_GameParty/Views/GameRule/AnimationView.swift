@@ -1,4 +1,3 @@
-// SwiftUI 프레임워크를 가져옵니다.
 import SwiftUI
 
 // TitleAnimationView라는 View를 정의합니다.

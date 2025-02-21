@@ -39,14 +39,12 @@ struct GameSelectorView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // 배경 그라데이션
                 LinearGradient(gradient: Gradient(colors: [Color(hex: "0026FD"), Color(hex: "311b92")]),
                                startPoint: .top,
                                endPoint: .bottom)
                 .ignoresSafeArea()
                 
                 VStack(spacing: 0) {
-                    // 헤더
                     HStack {
                         Button(action: { dismiss() }) {
                             Image(systemName: "xmark")
@@ -69,7 +67,6 @@ struct GameSelectorView: View {
                     }
                     .padding()
                     
-                    // 게임 목록
                     ScrollView {
                         LazyVStack(spacing: 16) {
                             ForEach(GameType.allCases, id: \.self) { game in

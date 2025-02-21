@@ -59,7 +59,6 @@ struct NumberBaseballGameView: View {
                 }
                 .padding()
                 
-                // 게임 기록
                 ScrollView {
                     LazyVStack(spacing: 12) {
                         ForEach(gameHistory.indices, id: \.self) { index in
@@ -73,7 +72,6 @@ struct NumberBaseballGameView: View {
                     .padding()
                 }
                 
-                // 입력 영역
                 VStack(spacing: 16) {
                     HStack {
                         TextField("\(difficulty.digitCount)자리 숫자 입력", text: $userInput)
