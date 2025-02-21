@@ -5,12 +5,31 @@
 //  Created by 윤태한 on 2/20/25.
 //
 
-
 import SwiftUI
 
 // MARK: - RankingComponent View
 struct RankingComponent: View {
     @State private var selectedDifficulty: String = "3"
+    
+    // 샘플 순위 데이터
+    let MOCK_RANKINGS: [String: [RankingItem]] = [  // 난이도별 순위 데이터를 딕셔너리 형태로 저장
+        "3": [
+            RankingItem(id: 1, name: "Player1", tries: 4, time: "00:45"), // 1위
+            RankingItem(id: 2, name: "Player2", tries: 5, time: "01:02"), // 2위
+            RankingItem(id: 3, name: "Player3", tries: 6, time: "01:15"), // 3위
+        ],
+        "4": [
+            RankingItem(id: 1, name: "Player4", tries: 4, time: "01:30"), // 1위
+            RankingItem(id: 2, name: "Player5", tries: 5, time: "01:45"), // 2위
+            RankingItem(id: 3, name: "Player6", tries: 6, time: "02:00"), // 3위
+        ],
+        "5": [
+            RankingItem(id: 1, name: "Player7", tries: 4, time: "02:15"), // 1위
+            RankingItem(id: 2, name: "Player8", tries: 5, time: "02:30"), // 2위
+            RankingItem(id: 3, name: "Player9", tries: 6, time: "02:45"), // 3위
+        ],
+    ]
+    
     
     var body: some View {
         ZStack {
