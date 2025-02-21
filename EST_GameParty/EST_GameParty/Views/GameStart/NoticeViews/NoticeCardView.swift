@@ -68,11 +68,40 @@ struct NoticeCardView: View {
 
 
 #Preview {
-    NoticeCardView(notice: Notice(
-        title: "게임 규칙 안내",
-        date: "2025.02.01",
-        category: "안내",
-        content: "숫자야구 게임의 기본 규칙을 안내드립니다.\n\n1. 3자리의 서로 다른 숫자를 맞추는 게임입니다.\n2. 숫자와 위치가 모두 맞으면 스트라이크\n3. 숫자는 맞지만 위치가 다르면 볼\n4. 3스트라이크면 게임 승리!",
-        isNew: false
-    ))
+    NoticeCardView(notice:
+                    Notice(
+                        title: "게임 규칙 안내",
+                        date: "2025.02.01",
+                        category: "업데이트",
+                        content: "..",
+                        isNew: false
+                    )
+    )
+    NoticeCardView(notice:
+                    Notice(
+                        title: "게임 규칙 안내",
+                        date: "2025.02.01",
+                        category: "이벤트",
+                        content: "..",
+                        isNew: false
+                    )
+    )
+    NoticeCardView(notice:
+                    Notice(
+                        title: "게임 규칙 안내",
+                        date: "2025.02.01",
+                        category: "점검",
+                        content: "..",
+                        isNew: false
+                    )
+    )
+    NoticeCardView(notice:
+                    Notice(
+                        title: "게임 규칙 안내",
+                        date: "2025.02.01",
+                        category: "디폴트",
+                        content: "..",
+                        isNew: false
+                    )
+    )
 }

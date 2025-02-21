@@ -15,7 +15,10 @@ struct ProfileView: View {
     
     //MARK: - 사용자 정보를 위한 상태 변수들
     @State private var nickname: String = UserDefaults.standard.string(forKey: "nickname") ?? "닉네임을 설정해주세요."
-    @State var totalGames = UserDefaults.standard.integer(forKey: "totalGames")
+    
+    //Appstorgate
+    @AppStorage("totalGames") private var totalGames: Int = UserDefaults.standard.integer(forKey: "totalGames")
+
     @State private var winRate = UserDefaults.standard.integer(forKey: "winRate")
     @State private var currentStreak = UserDefaults.standard.integer(forKey: "currentStreak")
     @State private var bestRecord = "0분 0초"

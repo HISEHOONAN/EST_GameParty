@@ -123,6 +123,7 @@ struct NumberBaseballGameView: View {
         var strikes = 0
         var balls = 0
         
+        //MARK: - 야구게임
         for (index, digit) in userInput.enumerated() {
             if targetNumber.contains(digit) {
                 if targetNumber[targetNumber.index(targetNumber.startIndex, offsetBy: index)] == digit {
@@ -150,18 +151,14 @@ struct NumberBaseballGameView: View {
         attempts = 0
         userInput = ""
         showGameOver = false
-        let profile = ProfileView()
         var games = UserDefaults.standard.integer(forKey: "totalGames")
         games += 1
-        profile.totalGames = games
         UserDefaults.standard.set(games, forKey: "totalGames")
     }
     
     private func quitGame() {
-        let profile = ProfileView()
         var games = UserDefaults.standard.integer(forKey: "totalGames")
         games += 1
-        profile.totalGames = games
         UserDefaults.standard.set(games, forKey: "totalGames")
         dismiss()
     }
