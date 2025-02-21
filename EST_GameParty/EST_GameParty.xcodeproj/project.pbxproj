@@ -24,12 +24,18 @@
 		D1B2C96C2D66F62D003DCC83 /* AchievementsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2C9572D66F62D003DCC83 /* AchievementsCard.swift */; };
 		D1B2C96D2D66F62D003DCC83 /* GameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2C94E2D66F62D003DCC83 /* GameStartView.swift */; };
 		D1B2C96E2D66F62D003DCC83 /* NoticeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2C9532D66F62D003DCC83 /* NoticeCardView.swift */; };
-		D1B2C9702D66F786003DCC83 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2C96F2D66F786003DCC83 /* AnimationView.swift */; };
+		D1B2C9702D66F786003DCC83 /* TitleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B2C96F2D66F786003DCC83 /* TitleAnimationView.swift */; };
 		D1DD60E32D5F445800092BC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1DD60DD2D5F445800092BC2 /* Preview Assets.xcassets */; };
 		D1DD60E42D5F445800092BC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1DD60DF2D5F445800092BC2 /* Assets.xcassets */; };
 		D1DD60E52D5F445800092BC2 /* EST_GamePartyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60E02D5F445800092BC2 /* EST_GamePartyApp.swift */; };
 		D1DD60E62D5F445800092BC2 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60E12D5F445800092BC2 /* MainTabBarView.swift */; };
+<<<<<<< HEAD
 		D1DD60EC2D5F449200092BC2 /* GameRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60EB2D5F449200092BC2 /* GameRuleView.swift */; };
+=======
+		D1DD60EE2D5F449C00092BC2 /* GameRankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD60ED2D5F449C00092BC2 /* GameRankingView.swift */; };
+		DAE8CDEA2D6717BC00C31024 /* RuleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8CDE82D67178F00C31024 /* RuleItemView.swift */; };
+		DAE8CDEF2D67FE1A00C31024 /* GameRuleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE8CDED2D67FE1A00C31024 /* GameRuleView.swift */; };
+>>>>>>> Feature/GameRule
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,13 +56,19 @@
 		D1B2C9582D66F62D003DCC83 /* RecentGamesCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentGamesCard.swift; sourceTree = "<group>"; };
 		D1B2C9592D66F62D003DCC83 /* StatisticsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCard.swift; sourceTree = "<group>"; };
 		D1B2C95B2D66F62D003DCC83 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		D1B2C96F2D66F786003DCC83 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		D1B2C96F2D66F786003DCC83 /* TitleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAnimationView.swift; sourceTree = "<group>"; };
 		D1DD60C42D5F43CE00092BC2 /* EST_GameParty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EST_GameParty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1DD60DD2D5F445800092BC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D1DD60DF2D5F445800092BC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1DD60E02D5F445800092BC2 /* EST_GamePartyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EST_GamePartyApp.swift; sourceTree = "<group>"; };
 		D1DD60E12D5F445800092BC2 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		D1DD60EB2D5F449200092BC2 /* GameRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRuleView.swift; sourceTree = "<group>"; };
+=======
+		D1DD60ED2D5F449C00092BC2 /* GameRankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRankingView.swift; sourceTree = "<group>"; };
+		DAE8CDE82D67178F00C31024 /* RuleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleItemView.swift; sourceTree = "<group>"; };
+		DAE8CDED2D67FE1A00C31024 /* GameRuleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRuleView.swift; sourceTree = "<group>"; };
+>>>>>>> Feature/GameRule
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -205,8 +217,8 @@
 		D1DD60DB2D5F445800092BC2 /* GameRule */ = {
 			isa = PBXGroup;
 			children = (
-				D1B2C96F2D66F786003DCC83 /* AnimationView.swift */,
-				D1DD60EB2D5F449200092BC2 /* GameRuleView.swift */,
+				DAE8CDEC2D67FDD400C31024 /* AnimationView */,
+				DAE8CDEE2D67FE1A00C31024 /* GameRuleView */,
 			);
 			path = GameRule;
 			sourceTree = "<group>";
@@ -247,6 +259,23 @@
 				D1DD60DB2D5F445800092BC2 /* GameRule */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DAE8CDEC2D67FDD400C31024 /* AnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				DAE8CDE82D67178F00C31024 /* RuleItemView.swift */,
+				D1B2C96F2D66F786003DCC83 /* TitleAnimationView.swift */,
+			);
+			path = AnimationView;
+			sourceTree = "<group>";
+		};
+		DAE8CDEE2D67FE1A00C31024 /* GameRuleView */ = {
+			isa = PBXGroup;
+			children = (
+				DAE8CDED2D67FE1A00C31024 /* GameRuleView.swift */,
+			);
+			path = GameRuleView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +358,7 @@
 			files = (
 				D1DD60E52D5F445800092BC2 /* EST_GamePartyApp.swift in Sources */,
 				D1B2C95E2D66F62D003DCC83 /* StatisticsCard.swift in Sources */,
+				DAE8CDEA2D6717BC00C31024 /* RuleItemView.swift in Sources */,
 				D1B2C95F2D66F62D003DCC83 /* GameSelectorView.swift in Sources */,
 				D1B2C9602D66F62D003DCC83 /* GameStartModel.swift in Sources */,
 				D1B2C9612D66F62D003DCC83 /* CustomText.swift in Sources */,
@@ -338,6 +368,7 @@
 				D1B2C9652D66F62D003DCC83 /* RecentGamesCard.swift in Sources */,
 				D1B2C9662D66F62D003DCC83 /* Extension_Color.swift in Sources */,
 				D1B2C9672D66F62D003DCC83 /* GameCard.swift in Sources */,
+				DAE8CDEF2D67FE1A00C31024 /* GameRuleView.swift in Sources */,
 				D1B2C9682D66F62D003DCC83 /* GuessResultCard.swift in Sources */,
 				D1B2C9692D66F62D003DCC83 /* NoticeModel.swift in Sources */,
 				D1B2C96A2D66F62D003DCC83 /* ProfileView.swift in Sources */,
@@ -346,8 +377,7 @@
 				D1B2C96D2D66F62D003DCC83 /* GameStartView.swift in Sources */,
 				D1B2C96E2D66F62D003DCC83 /* NoticeCardView.swift in Sources */,
 				D1DD60E62D5F445800092BC2 /* MainTabBarView.swift in Sources */,
-				D1DD60EC2D5F449200092BC2 /* GameRuleView.swift in Sources */,
-				D1B2C9702D66F786003DCC83 /* AnimationView.swift in Sources */,
+				D1B2C9702D66F786003DCC83 /* TitleAnimationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
