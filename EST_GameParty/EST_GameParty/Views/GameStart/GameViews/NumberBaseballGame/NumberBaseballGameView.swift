@@ -9,11 +9,13 @@ import SwiftUI
 
 struct NumberBaseballGameView: View {
     
-    @Environment(\ .dismiss) private var dismiss
+    @Environment(\.dismiss) private var dismiss
     @State private var userInput = ""
     @State private var gameHistory: [(guess: String, result: String)] = []
     @State private var targetNumber: String
     @State private var showGameOver = false
+    @State private var showAlert = false
+    @State private var alertMessage = ""
     @State private var attempts = 0
     
     let difficulty: DifficultySelector.Difficulty
@@ -92,7 +94,6 @@ struct NumberBaseballGameView: View {
                                         .fill(Color(hex: "00b0ff"))
                                 )
                         }
-                        .disabled(userInput.count != difficulty.digitCount)
                     }
                     .padding()
                 }
@@ -100,6 +101,11 @@ struct NumberBaseballGameView: View {
                 
                 Spacer()
             }
+        }
+        .alert("입력 오류", isPresented: $showAlert) {
+            Button("확인", role: .cancel) { }
+        } message: {
+            Text(alertMessage)
         }
         .alert("게임 종료!", isPresented: $showGameOver) {
             Button("새 게임", action: resetGame)
@@ -109,7 +115,11 @@ struct NumberBaseballGameView: View {
     }
     
     private func checkGuess() {
-        guard userInput.count == difficulty.digitCount else { return }
+        guard userInput.count == difficulty.digitCount else {
+            alertMessage = "숫자를 \(difficulty.digitCount)자리로 입력해주세요!"
+            showAlert = true
+            return
+        }
         
         var strikes = 0
         var balls = 0
@@ -142,6 +152,3 @@ struct NumberBaseballGameView: View {
         showGameOver = false
     }
 }
-
-
-
