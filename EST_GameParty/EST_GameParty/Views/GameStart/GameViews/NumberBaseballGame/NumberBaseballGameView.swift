@@ -107,6 +107,7 @@ struct NumberBaseballGameView: View {
         }
         .alert("게임 종료!", isPresented: $showGameOver) {
             Button("새 게임", action: resetGame)
+            Button("그만하기", action: quitGame)
         } message: {
             Text("축하합니다! \(attempts)번 만에 맞추셨습니다!")
         }
@@ -129,6 +130,7 @@ struct NumberBaseballGameView: View {
                 } else {
                     balls += 1
                 }
+                
             }
         }
         
@@ -148,5 +150,19 @@ struct NumberBaseballGameView: View {
         attempts = 0
         userInput = ""
         showGameOver = false
+        let profile = ProfileView()
+        var games = UserDefaults.standard.integer(forKey: "totalGames")
+        games += 1
+        profile.totalGames = games
+        UserDefaults.standard.set(games, forKey: "totalGames")
+    }
+    
+    private func quitGame() {
+        let profile = ProfileView()
+        var games = UserDefaults.standard.integer(forKey: "totalGames")
+        games += 1
+        profile.totalGames = games
+        UserDefaults.standard.set(games, forKey: "totalGames")
+        dismiss()
     }
 }
