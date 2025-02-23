@@ -14,11 +14,14 @@ struct ProfileView: View {
     @State private var isEditMode = false
     
     //MARK: - 사용자 정보를 위한 상태 변수들
-    @State private var nickname = "게이머123"
-    @State private var totalGames = 42
-    @State private var winRate = 76.2
-    @State private var currentStreak = 5
-    @State private var bestRecord = "2분 30초"
+    @State private var nickname: String = UserDefaults.standard.string(forKey: "nickname") ?? "닉네임을 설정해주세요."
+    
+    //Appstorgate
+    @AppStorage("totalGames") private var totalGames: Int = UserDefaults.standard.integer(forKey: "totalGames")
+
+    @State private var winRate = UserDefaults.standard.integer(forKey: "winRate")
+    @State private var currentStreak = UserDefaults.standard.integer(forKey: "currentStreak")
+    @State private var bestRecord = "0분 0초"
     
     var body: some View {
         ZStack {
@@ -44,7 +47,12 @@ struct ProfileView: View {
                         
                         Spacer()
                         
-                        Button(action: { isEditMode.toggle() }) {
+                        Button(action: {
+                            if isEditMode {
+                                UserDefaults.standard.set(nickname, forKey: "nickname")
+                            }
+                            isEditMode.toggle()
+                        }) {
                             Image(systemName: isEditMode ? "checkmark" : "square.and.pencil")
                                 .font(.title2)
                                 .foregroundColor(.white)
@@ -90,9 +98,6 @@ struct ProfileView: View {
         .navigationBarHidden(true)
     }
 }
-
-
-
 
 #Preview {
     ProfileView()

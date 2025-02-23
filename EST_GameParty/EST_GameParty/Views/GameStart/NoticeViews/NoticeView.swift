@@ -14,9 +14,9 @@ struct NoticeView: View {
     let notices = [
         Notice(
             title: "숫자야구 게임 업데이트 안내",
-            date: "2025.02.19",
-            category: "업데이트",
-            content: "성능을 업그레이드 시켰어요 !",
+            date: "2025.02.24",
+            category: "출시",
+            content: "version 1.0.0 Release",
             isNew: true
         )
     ]
