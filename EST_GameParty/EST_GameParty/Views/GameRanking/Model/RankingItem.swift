@@ -8,20 +8,19 @@
 import SwiftUI
 
 // MARK: - 모델
-struct RankingItem: Identifiable {
-    let id: Int         // 각 항목의 고유 식별자
-    let name: String    // 플레이어의 이름
-    let tries: Int      // 시도 횟수
-    let time: String    // 소요 시간
+struct RankingItem: Identifiable, Codable {
+    let id: Int
+    let name: String
+    let tries: Int
+    let time: String
 }
 
 struct Difficulty: Identifiable {
-    let id: String      // 난이도 id
-    let name: String    // 사용자에게 표시할 난이도 이름
-    let color: Color    // 난이도에 할당된 색상
+    let id: String
+    let name: String
+    let color: Color
 }
 
-// 난이도 데이터 (Difficulty Data)
 let DIFFICULTY_LEVELS: [Difficulty] = [
     Difficulty(id: "3", name: "3자리", color: Color(hex: "4ECDC4")),
     Difficulty(id: "4", name: "4자리", color: Color(hex: "CD4EC4")),
